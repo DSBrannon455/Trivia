@@ -7,15 +7,14 @@ const questions = [
         ansB: {answer: 'Dragon\'s Blood Tree', veracity: false},
         ansC: {answer: 'Deadly Nightshade', veracity: false},
         ansD: {answer: 'Gillyweed', veracity: true}
+    },
+    {
+        name: 'What is Harry\'s biggest fear?',
+        ansA: {answer: 'Dementors', veracity: true},
+        ansB: {answer: 'Boggarts', veracity: false},
+        ansC: {answer: 'Voldemort', veracity: false},
+        ansD: {answer: 'Snape', veracity: false}
     }
-    // {
-    //     name: 'What is Harry\'s biggest fear?',
-    //     //ansTrue: 'Dementors',
-    //     ansA: 'Dementors',
-    //     ansB: 'Boggarts',
-    //     ansC: 'Voldemort',
-    //     ansD: 'Snape'
-    // },
     // {
     //     name: 'What magical charm did Hermione use to help her finish all her homework?',
     //     ansA: 'Mermaid Tears',
