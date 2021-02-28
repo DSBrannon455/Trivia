@@ -14,15 +14,14 @@ const questions = [
         ansB: {answer: 'Boggarts', veracity: false},
         ansC: {answer: 'Voldemort', veracity: false},
         ansD: {answer: 'Snape', veracity: false}
-    }
-    // {
-    //     name: 'What magical charm did Hermione use to help her finish all her homework?',
-    //     ansA: 'Mermaid Tears',
-    //     ansB: 'Magical Ink',
-    //     //ansTrue: 'Time Turner',
-    //     ansC: 'Time Turner',
-    //     ansD: 'Phoenix Feather'
-    // },
+    },
+    {
+        name: 'What magical charm did Hermione use to help her finish all her homework?',
+        ansA: {answer: 'Mermaid Tears', veracity: false},
+        ansB: {answer: 'Magical Ink', veracity: false},
+        ansC: {answer: 'Time Turner', veracity: true},
+        ansD: {answer: 'Phoenix Feather', veracity: false}
+    },
     // {
     //     name: 'Who gave Harry the Cloak of Invisibility?',
     //     ansA: 'Sirius',
@@ -133,19 +132,34 @@ for (let i = 0; i < questions.length; i++) {
     $button3.text(questions[i].ansD.answer)
     $('body').append($button3)
 
+    let numRight = 0
+    let numWrong = 0
+
     $button.on('click' , () => {
         if (questions[i].ansA.veracity == true) {
         window.alert('That is the right answer!')
+        $('.number_right').empty()
+        numRight = numRight + 1
+        $('.number_right').append(numRight)
         } else {
         window.alert('That is the wrong answer!')
+        $('.number_wrong').empty()
+        numWrong = numWrong + 1
+        $('.number_wrong').append(numWrong) 
         }
     })
 
     $button1.on('click' , () => {
         if (questions[i].ansB.veracity == true) {
         window.alert('That is the right answer!')
+        $('.number_right').empty()
+        numRight = numRight + 1
+        $('.number_right').append(numRight)
         } else {
         window.alert('That is the wrong answer!')
+        $('.number_wrong').empty()
+        numWrong = numWrong + 1
+        $('.number_wrong').append(numWrong)
         }
     })
 
