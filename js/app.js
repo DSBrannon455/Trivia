@@ -25,22 +25,22 @@ const questions = [
         ansD: {answer: 'Phoenix Feather', veracity: false},
         answered: false
     },
-    // {
-    //     name: 'Who gave Harry the Cloak of Invisibility?',
-    //     ansA: 'Sirius',
-    //     //ansTrue: 'Dumbledore',
-    //     ansB: 'Dumbledore',
-    //     ansC: 'McGonagall',
-    //     ansD: 'Ron'
-    // },
-    // {
-    //     name: 'What is the name of Hagrid\'s boar-hound?',
-    //     ansA: 'Buddy',
-    //     ansB: 'Brutus',
-    //     //ansTrue: 'Fang',
-    //     ansC: 'Fang',
-    //     ansD: 'Max'
-    // },
+    {
+        name: 'Who gave Harry the Cloak of Invisibility?',
+        ansA: {answer: 'Sirius', veracity: false},
+        ansB: {answer: 'Dumbledore', veracity: true},
+        ansC: {answer: 'McGonagall', veracity: false},
+        ansD: {answer: 'Ron', veracity: false},
+        answered: false
+    },
+    {
+        name: 'What is the name of Hagrid\'s boar-hound?',
+        ansA: {answer: 'Buddy', veracity: false},
+        ansB: {answer: 'Brutus', veracity: false},
+        ansC: {answer: 'Fang', veracity: true},
+        ansD: {answer: 'Max', veracity: false},
+        answered: false
+    }
     // {
     //     name: 'Which professor had Harry write \"I must not tell lies\" over and over again?',
     //     //ansTrue: 'Umbridge',
