@@ -14,14 +14,16 @@ const questions = [
         ansA: {answer: 'Dementors', veracity: true},
         ansB: {answer: 'Boggarts', veracity: false},
         ansC: {answer: 'Voldemort', veracity: false},
-        ansD: {answer: 'Snape', veracity: false}
+        ansD: {answer: 'Snape', veracity: false},
+        answered: false
     },
     {
         name: 'What magical charm did Hermione use to help her finish all her homework?',
         ansA: {answer: 'Mermaid Tears', veracity: false},
         ansB: {answer: 'Magical Ink', veracity: false},
         ansC: {answer: 'Time Turner', veracity: true},
-        ansD: {answer: 'Phoenix Feather', veracity: false}
+        ansD: {answer: 'Phoenix Feather', veracity: false},
+        answered: false
     },
     // {
     //     name: 'Who gave Harry the Cloak of Invisibility?',
@@ -158,60 +160,72 @@ for (let i = 0; i < questions.length; i++) {
     })
     
     $button1.on('click' , () => {
-        if (questions[i].ansB.veracity == true) {
-        window.alert('That is the right answer!')
-        $('.number_right').empty()
-        numRight = numRight + 1
-        console.log(numRight)
-        $('.number_right').text(numRight)
-        } else {
-        window.alert('That is the wrong answer!')
-        $('.number_wrong').empty()
-        numWrong = numWrong + 1
-        console.log(numWrong)
-        $('.number_wrong').text(numWrong) 
+        if (questions[i].answered == false) {
+            if (questions[i].ansB.veracity == true) {
+            window.alert('That is the right answer!')
+            $('.number_right').empty()
+            numRight = numRight + 1
+            console.log(numRight)
+            $('.number_right').text(numRight)
+            } else {
+            window.alert('That is the wrong answer!')
+            $('.number_wrong').empty()
+            numWrong = numWrong + 1
+            console.log(numWrong)
+            $('.number_wrong').text(numWrong) 
+            }
+            questions[i].answered = true
         }
     })
 
     $button2.on('click' , () => {
-        if (questions[i].ansC.veracity == true) {
-        window.alert('That is the right answer!')
-        $('.number_right').empty()
-        numRight = numRight + 1
-        console.log(numRight)
-        $('.number_right').text(numRight)
-        } else {
-        window.alert('That is the wrong answer!')
-        $('.number_wrong').empty()
-        numWrong = numWrong + 1
-        console.log(numWrong)
-        $('.number_wrong').text(numWrong) 
+        if (questions[i].answered == false) {
+            if (questions[i].ansC.veracity == true) {
+            window.alert('That is the right answer!')
+            $('.number_right').empty()
+            numRight = numRight + 1
+            console.log(numRight)
+            $('.number_right').text(numRight)
+            } else {
+            window.alert('That is the wrong answer!')
+            $('.number_wrong').empty()
+            numWrong = numWrong + 1
+            console.log(numWrong)
+            $('.number_wrong').text(numWrong) 
+            }
+            questions[i].answered = true
         }
     })
 
     $button3.on('click' , () => {
-        if (questions[i].ansD.veracity == true) {
-        window.alert('That is the right answer!')
-        $('.number_right').empty()
-        numRight = numRight + 1
-        console.log(numRight)
-        $('.number_right').text(numRight)
-        } else {
-        window.alert('That is the wrong answer!')
-        $('.number_wrong').empty()
-        numWrong = numWrong + 1
-        console.log(numWrong)
-        $('.number_wrong').text(numWrong)
+        if (questions[i].answered == false) {
+            if (questions[i].ansD.veracity == true) {
+            window.alert('That is the right answer!')
+            $('.number_right').empty()
+            numRight = numRight + 1
+            console.log(numRight)
+            $('.number_right').text(numRight)
+            } else {
+            window.alert('That is the wrong answer!')
+            $('.number_wrong').empty()
+            numWrong = numWrong + 1
+            console.log(numWrong)
+            $('.number_wrong').text(numWrong)
+            }
+            questions[i].answered = true
         }
     })
+}
 
     function init() {
         $('.number_right').empty()
         $('.number_wrong').empty()
         numRight = 0
         numWrong = 0
+        for (let i = 0; i < questions.length; i++) {
+            questions[i].answered = false
+        }
     }
-    
     // document.getElementById('reset-button').addEventListener('click', init)
 
     $('#reset-button').on('click' , () => {
@@ -232,7 +246,7 @@ for (let i = 0; i < questions.length; i++) {
     //     window.alert('That is the wrong answer!')
     // })
 
-}
+
 
 // const $button = $('<button>')
 //     $button.text('Reset')
@@ -259,6 +273,4 @@ for (let i = 0; i < questions.length; i++) {
 //How do I get the right answer in each instance?
 //How do I get the reset button to start the game over?
 //How do I keep score?
-
-
 
