@@ -179,6 +179,14 @@ for (let i = 0; i < questions.length; i++) {
         }
     })
 
+    function init() {
+        $('.number_right').empty()
+        $('.number_wrong').empty()
+    }
+    document.getElementById('reset-button').addEventListener('click', init)
+
+    
+
     // $button1.on('click' , () => {
     //     window.alert('That is the wrong answer!')
     // })
