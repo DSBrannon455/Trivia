@@ -182,6 +182,8 @@ for (let i = 0; i < questions.length; i++) {
     function init() {
         $('.number_right').empty()
         $('.number_wrong').empty()
+        let numRight = 0
+        let numWrong = 0
     }
     document.getElementById('reset-button').addEventListener('click', init)
 
